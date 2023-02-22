@@ -1,18 +1,19 @@
 #include <unistd.h>
 #include "main.h"
+
 /**
- * main - debugging example
- * Return: 0
+ * main - Check description
+ * Description: It prints the word Narrative, followed by a new line.
+ * Return: 0.
  */
 int main(void)
 {
-	char *holberton = "Holberton";
+char word[9] = "Narrative";
+int i;
 
-	while (*holberton)
-	{
-		_putchar(*holberton);
-		holberton++;
-	}
-	_putchar('\n');
-	return (0);
+for (i = 0; i < 9; i++)
+_putchar(word[i]);
+_putchar('\n');
+
+return (0);
 }
