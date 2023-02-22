@@ -1,19 +1,18 @@
-#include <unistd.h>
 #include "main.h"
-
 /**
- * main - Check description
- * Description: It prints the word Narrative, followed by a new line.
- * Return: 0.
+ * main - prints _putchar, fllowd by a new linees
+ * Return: Alwys 0 (Success)
  */
 int main(void)
 {
-char word[9] = "Narrative";
-int i;
+	char abe[] = "_putchar";
 
-for (i = 0; i < 9; i++)
-_putchar(word[i]);
-_putchar('\n');
+	int c;
 
-return (0);
+	for (c = 0; c < 8; c++)
+	{
+		_putchar(abe[c]);
+	}
+	_putchar('\n');
+	return (0);
 }
