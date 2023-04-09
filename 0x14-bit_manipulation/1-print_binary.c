@@ -1,26 +1,13 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: parameter
+ * get_endianness - checks if a machine is little or big endian
+ * Return: 0 for big, 1 for little
  */
-void print_binary(unsigned long int n)
+int get_endianness(void)
 {
-	int i, count = 0;
-	unsigned long int current;
+	unsigned int i = 1;
+	char *d = (char *) &i;
 
-	for (i = 63; i >= 0; i--)
-	{
-		current = n >> i;
-
-		if (current & 1)
-		{
-			_putchar('1');
-			count++;
-		}
-		else if (count)
-			_putchar('0');
-	}
-	if (!count)
-		_putchar('0');
+	return (*d);
 }
